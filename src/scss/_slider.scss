@@ -1,0 +1,22 @@
+.karussel {
+	overflow: hidden;
+	width: 400px;
+	height: 300px;
+	display: flex;
+	flex-wrap: nowrap;
+	.slide:first-of-type {
+		background-color: olivedrab;
+	}
+	.slide:last-of-type {
+		background-color: navy;
+	}
+	.slide {
+		//transform: translateY(-300px);
+		min-width: 400px;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: transform 2s ease;
+	}
+}

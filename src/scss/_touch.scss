@@ -1,0 +1,28 @@
+.touchDiv {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+	img {
+		position: absolute;
+	}
+}
+
+@keyframes moveRight{
+	0%{
+		transform: translateX(0);
+	}
+
+	100%{
+		transform: translateX(120%);
+	}
+}
+@keyframes moveLeft{
+	0%{
+		transform: translateX(0);
+	}
+
+	100%{
+		transform: translateX(-120%);
+	}
+}
