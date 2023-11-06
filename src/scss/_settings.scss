@@ -1,0 +1,36 @@
+.Setting {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid var(--ice);
+    background-color: var(--snow);
+    &__btn {
+        width: 50px;
+        padding: 1px;
+        border-radius: 20px;
+        background-color: var(--sage);
+        box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
+        transition: background-color .2s;
+    }
+    &__slider {
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--snow);
+        box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
+        transition: transform .2s ease-in-out;
+        transform: translateX(100%);
+    }    
+    &__header {
+        text-transform: uppercase;
+    }
+}
+
+.Btn_darkMode {
+    text-transform: uppercase;
+    border: 1px solid var(--fossil);
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}

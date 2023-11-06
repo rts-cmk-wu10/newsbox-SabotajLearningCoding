@@ -1,0 +1,55 @@
+@mixin colorAnimation($prop, $color){
+    @keyframes #{$prop}-animation{
+        0% {#{$prop}: $color}
+        50% {#{$prop}: lighten($color, 5%)}
+        100% {#{$prop}: $color}
+    }
+}
+
+@include colorAnimation(background-color, map-get($colors, "rust"));
+@include colorAnimation(border-bottom-color, map-get($colors, "rust"));
+
+.Tutorial {
+    z-index: 2;
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--rust);
+    margin: 5px;
+    padding: 10px;
+    opacity: 1;
+    max-width: 60%;
+    animation: background-color-animation 3s infinite ease-in-out;
+    &_highlighted {
+        z-index: 2;
+        text-shadow: 0 0 0.5em lighten(rgba($color: map-get($colors, "rust"), $alpha: 0.3), 30%);
+    };
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--rust);
+        position: absolute;
+        top: -10px;
+        animation: border-bottom-color-animation 3s infinite ease-in-out;
+    }
+    &__skip-btn {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: white;
+        top: 40%;
+        left: 40%;
+        pointer-events: auto !important;
+        z-index: 2;
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: rgba(0, 0, 0, 50%);
+        box-shadow: 0 0 20px rgba($color: map-get($colors, "rust"), $alpha: 0.5);
+    }
+}

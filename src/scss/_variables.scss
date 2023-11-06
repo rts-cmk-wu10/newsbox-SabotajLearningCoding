@@ -1,0 +1,88 @@
+$margin-base: 5px;
+$padding-base: 5px;
+$font-size-base: 15px;
+$border-radius-base: 4px;
+$gap-base: 5px;
+
+$colors: (
+    "transparent": transparent,
+    "sage": #87BCBF,
+    "rust": #D97D54,
+    "drab": #324755,
+    "danger": #D95454,
+    "ice": #F0F3F4,
+    "fossil": #C8D1D3,
+    "sand": #B9B0A2,
+    "onyx": #1B1C20,
+    "slate": #6E8CA0,
+    "snow": #FFFFFF,
+    "black": #000000
+);
+
+
+:root {
+    @each $key, $val in $colors {
+        --#{$key}: #{$val};
+    }
+}
+
+.dark-theme {
+    --sage: #{darken(map-get($colors, "sage"), 20%)};
+    --snow: #{map-get($colors, "onyx")};
+    --ice: #{lighten(map-get($colors, "onyx"), 10%)};
+    --fossil: #{map-get($colors, "black")};
+    --black: #{map-get($colors, "snow")};
+    --drab: #{map-get($colors, "ice")};
+
+}
+
+$font-primary: europa;
+$font-secondary: rift-soft;
+
+$fonts: (
+    $font-primary,
+    $font-secondary
+);
+
+%font-primary {font-family: $font-primary, sans-serif;}
+%font-secondary {font-family: $font-secondary, sans-serif;}
+
+%primary-heading {
+    @extend %font-primary;
+    font-size: $font-size-base + 9px;
+    font-weight: 700;
+}
+
+%secondary-heading {
+    @extend %primary-heading;
+}
+
+%section-header {
+    @extend %font-primary;
+    font-size: $font-size-base + 3px;
+    font-weight: 700;
+}
+
+%sub-title {
+    @extend %font-secondary;
+    font-size: $font-size-base + 3px;
+    font-weight: 400;
+}
+
+%card-title {
+    @extend %font-primary;
+    font-size: $font-size-base;
+    font-weight: 700;
+}
+
+%card-copy {
+    @extend %font-primary;
+    font-size: $font-size-base;
+    font-weight: 300;
+}
+
+%body-copy {
+    @extend %font-primary;
+    font-size: $font-size-base - 1px;
+    font-weight: 300;
+}

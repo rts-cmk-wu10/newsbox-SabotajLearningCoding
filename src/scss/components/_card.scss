@@ -1,0 +1,65 @@
+$cardHeight: 100px;
+.Card__container {
+    transition: max-height 0.4s;
+    .Card {
+        display: grid;
+        grid-template-columns: 2fr $cardHeight;
+        border-bottom: 1px solid var(--ice);
+        transition: 0.4s;
+        height: $cardHeight;
+        &__btn {
+            grid-area: 1/2/2/3;
+            &_inbox {
+                background-color: var(--sage);
+            }
+            &_delete {
+                background-color: var(--danger);
+            }
+        }
+        &__text {
+            overflow: hidden;
+            transition: transform 0.1s;
+            grid-area: 1/1/2/3;
+            display: grid;
+            grid-template-columns: ($cardHeight * 0.75) 1fr;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--snow);
+        }
+        &__img {
+            width: $cardHeight * 0.75;
+            height: $cardHeight * 0.75;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        &__title {
+            @extend %card-title;
+        }
+        &__abstract {
+            @extend %card-copy;
+        }
+    }
+}
+
+.hide-animation {
+    animation: hide 0.5s forwards;
+}
+
+.show-animation {
+    animation: show 0.5s;
+}
+
+.del-animation {
+    height: 0px !important; 
+    border: 0px;
+    opacity: 0;
+    transform: translateX(-100vw); 
+}
+
+@keyframes hide {
+    100% {max-height: 0px; border-color: transparent; opacity: 0;}
+}
+@keyframes show {
+    0% {max-height: 0px; opacity: 0;}
+    100% {max-height: 100vh; opacity: 1;}
+}

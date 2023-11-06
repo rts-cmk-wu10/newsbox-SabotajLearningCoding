@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsbox - Archive</title>
+    <script src="https://kit.fontawesome.com/a2dfdd7eaf.js" crossorigin="anonymous"></script> <!--fontawesome script-->
+    <link rel="stylesheet" href="https://use.typekit.net/ygz0rfm.css"> <!--typekit fonts-->
+    <link rel="stylesheet" href="./dist/index.css"> <!--css link-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> <!--Toastify-->
 </head>
-
-<body>
-    <div id="Wrapper">
-        <header></header>
-
-        <main></main>
-
-        <footer></footer>
-    </div>
-    <!-- Wrapper end -->
+<body class="Body">
+    <header class="Header">
+        <nav class="Nav p-3">
+            <ul class="Nav__list">
+                <li><a href="index.html"><i class="fas fa-chevron-left fs-l"></i></a></li>
+                <li><h1 class="Nav__header">Archive</h1></li>
+                <li><a href="settings.html"><i class="fas fa-cog fs-l"></i></a></li>
+            </ul>
+        </nav>
+        <form class="d-f ai-center of-hidden jc-space-between  br m-2 p-2 mt-3 mb-3 Nav__search" action="index.html?">
+            <input class="bg-transparent text-slate w-100 Nav__search__input" type="text" name="search" id="search" placeholder="Search news">
+            <i class="fas fa-search text-fossil"></i>
+        </form>
+    </header>
+    <main class="Main" id="main">
+       <!--  <section class="Section">
+            <div class="d-f gap-3 p-2  bt-1-ice ai-center">
+                <div class="Section__icon br-full d-f jc-center ai-center">
+                    <img src="./assets/icn_surfing.svg" alt="Header Icon" class="w-auto">
+                </div>
+                <h2 class="Section__header">${category}</h2>
+                <button class="ml-auto Section__btn show-hide"><i class="fas fa-chevron-right Section__chevron"></i></button>
+            </div>
+            <div class="Card__container hide-animation"></div>
+           <article class="Card">
+                <button class="Card__btn Card__btn_delete"><i class="fas fa-trash fs-l Card__icon"></i></button>
+                <div class="Card__text  p-2">
+                    <img src="${article.multimedia[0].url}" class="Card__img">
+                    <div>
+                        <h3 class="Card__title">${article.title}</h3>
+                        <p class="Card__abstract">${shortenStr(article.abstract, 60)}...</p>
+                    </div>
+                </div>
+            </article>
+        </section> -->
+    </main>
+    <!-- <div class="del-animation hide-animation show-animation dark-theme Toast_delete Tutorial Tutorial_highlighted Tutorial__triangle Tutorial__skip-btn LightBox"></div> loads css class -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> <!--Toastify-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!--axios-->
+    <script src="./dist/archive.min.js"></script>
+    <script src="./dist/search.min.js"></script>
+    <script src="./dist/refresh.min.js"></script>
 </body>
-
 </html>
