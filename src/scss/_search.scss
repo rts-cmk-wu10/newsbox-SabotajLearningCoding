@@ -1,0 +1,15 @@
+.search {
+  border-top: solid 1px #c8d1d3;
+  border-bottom: solid 1px #c8d1d3;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+
+  .search__bar {
+    background-color: #f0f3f4;
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+.menu {
+  border-bottom: 0px solid #f0f3f4;
+  height: 60px;
+  margin-top: 5%;
+  &__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__archive {
+    position: relative;
+    &::after {
+      background-color: #87bcbf;
+      color: #324755;
+      content: attr(data-text);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      text-align: center;
+      font-weight: 600;
+      top: -10px;
+      right: -10px;
+      pointer-events: none;
+    }
+  }
+}

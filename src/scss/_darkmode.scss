@@ -1,0 +1,105 @@
+.darkMode-Btn {
+  text-transform: uppercase;
+  border: 1px solid #f0f3f4;
+  color: #000;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.version-text {
+  text-align: center;
+}
+
+body {
+  --headerBackground: hsl(240, 49%, 67%);
+  --secondaryTextColor: white;
+}
+
+body.darkmode {
+  --headerBackground: hsl(40, 67%, 48%);
+  --secondaryTextColor: black;
+}
+
+@mixin transition($var) {
+  transition: $var 800ms ease;
+}
+
+.siteHeader {
+  background-color: var(--headerBackground);
+  @include transition(background-color);
+  height: 10em;
+  padding: 2em 5em;
+  &__siteBrand {
+    color: var(--secondaryTextColor);
+    text-decoration: none;
+    @include transition(color);
+  }
+}
+
+.primaryNavigation {
+  &__menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--secondaryTextColor);
+    @include transition(color);
+    &:hover {
+      color: hsl(240, 34%, 27%);
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 62em;
+  overflow: hidden;
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  &__heading,
+  &__cta {
+    z-index: 5;
+  }
+  &__heading {
+    font-size: 5em;
+    color: teal;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+  &__cta {
+    background-color: hsl(0, 40%, 45%);
+    color: white;
+    font-size: 3em;
+    padding: 1em 3em;
+    border: none;
+    border-radius: 13px;
+  }
+}
+
+.articles {
+  display: flex;
+  gap: 3em;
+  padding: 2em;
+  .article {
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

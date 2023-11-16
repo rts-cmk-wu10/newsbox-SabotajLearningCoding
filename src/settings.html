@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsbox - Settings</title>
-    <script src="https://kit.fontawesome.com/a2dfdd7eaf.js" crossorigin="anonymous"></script> <!--fontawesome script-->
-    <link rel="stylesheet" href="https://use.typekit.net/ygz0rfm.css"> <!--typekit fonts-->
-    <link rel="stylesheet" href="./dist/index.css"> <!--css link-->
+    <link rel="stylesheet" href="./main.css">
+    <title>Newsbox - settingss</title>
 </head>
-<body class="Body Body_settings ">
-    <header class="Header">
-        <nav class="Nav p-3">
-            <ul class="Nav__list">
-                <li><a href="index.html"><i class="fas fa-chevron-left fs-l"></i></a></li>
-                <li><h1 class="Nav__header">News settings</h1></li>
-                <li><a href="settings.html"><i class="fas fa-cog fs-l"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="Main p-3 d-f fd-c ai-center" id="main">
-        <h2 class="fw-l ta-center pb-5 Main__header"><span class=" fw-b fs-xl">Manage</span><br>Categories</h2>
-        <div class=" br-4 w-100 of-hidden" id="setting-container">
-            <!-- <section class="Setting">
-                <h3 class="Setting__header">Europe</h3>
-                <button class="Setting__btn">
-                    <div class="Setting__slider"></div>
-                </button>
-            </section>
-            <section class="Setting">
-                <h3 class="Setting__header">Health</h3>
-                <button class="Setting__btn">
-                    <div class="Setting__slider"></div>
-                </button>
-            </section>
-            <section class="Setting">
-                <h3 class="Setting__header">Sports</h3>
-                <button class="Setting__btn">
-                    <div class="Setting__slider"></div>
-                </button>
-            </section>
-            <section class="Setting">
-                <h3 class="Setting__header">Business</h3>
-                <button class="Setting__btn">
-                    <div class="Setting__slider"></div>
-                </button>
-            </section>
-            <section class="Settingbb-1-transparent">
-                <h3 class="Setting__header">Travel</h3>
-                <button class="Setting__btn">
-                    <div class="Setting__slider"></div>
-                </button>
-            </section> -->
-        </div>
-        <button class="Btn_darkMode" id="dark-theme">toggle dark mode</button>
-        <p class="ta-center fs text-slate">Version 4.8.15.16.23.42</p>
-    </main>
-    <!-- <div class="del-animation hide-animation show-animation dark-theme"></div> loads css class -->
-    <script src="./dist/settings.min.js"></script>
-    <script src="./dist/refresh.min.js"></script>
+
+<body>
+    <div id="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="index.html"><img src="images/arrow-left-icon.png"
+                                alt="back-Btn"></a></li>
+                    <li>
+                        <h1 class="menu__heading">News settings</h1>
+                    </li>
+                    <li class="menu__item"><a href="settings.html"><img src="images/settings-icon.png"
+                                alt="settingss"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="settings__main">
+            <h2 class="settings__heading">
+                <span class="settings__heading__Manage">Manage</span>
+                <span class="settings__heading__Categories">Categories</span>
+                <span class="settings__line">_____</span>
+            </h2>
+            <div></div>
+            <div class="settings-container">
+
+                <div class="setting setting__first">
+                    <h3 class="setting__header">Europe</h3>
+                    <input type="checkbox" id="switch1" class="switch__checkbox">
+                    <label class="switch" for="switch1"></label>
+                </div>
+
+                <div class="setting">
+                    <h3 class="setting__header">Health</h3>
+                    <input type="checkbox" id="switch2" class="switch__checkbox">
+                    <label class="switch" for="switch2"></label>
+                </div>
+
+                <div class="setting">
+                    <h3 class="setting__header">Sports</h3>
+                    <input type="checkbox" id="switch3" class="switch__checkbox">
+                    <label class="switch" for="switch3"></label>
+                </div>
+
+                <div class="setting">
+                    <h3 class="setting__header">Business</h3>
+                    <input type="checkbox" id="switch4" class="switch__checkbox">
+                    <label class="switch" for="switch4"></label>
+                </div>
+
+                <div class="setting setting__last">
+                    <h3 class="setting__header">Travel</h3>
+                    <input type="checkbox" id="switch5" class="switch__checkbox">
+                    <label class="switch" for="switch5"></label>
+                </div>
+
+            </div>
+            <button class="darkMode-Btn">toggle dark mode</button>
+            <p class="version-text">Version 4.8.15.16.23.42</p>
+        </main>
+        <footer class="footer">
+        </footer>
+    </div><!--wrapper end-->
 </body>
+
 </html>

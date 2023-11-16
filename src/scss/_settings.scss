@@ -1,36 +1,67 @@
-.Setting {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid var(--ice);
-    background-color: var(--snow);
-    &__btn {
-        width: 50px;
-        padding: 1px;
-        border-radius: 20px;
-        background-color: var(--sage);
-        box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
-        transition: background-color .2s;
-    }
-    &__slider {
-        width: 50%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: var(--snow);
-        box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
-        transition: transform .2s ease-in-out;
-        transform: translateX(100%);
-    }    
-    &__header {
-        text-transform: uppercase;
-    }
-}
-
-.Btn_darkMode {
-    text-transform: uppercase;
-    border: 1px solid var(--fossil);
+.setting {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #f0f3f4;
+  background-color: #ffffff;
+  max-width: 95%;
+  margin: 0 auto;
+  &__first {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  &__last {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  &__btn {
+    width: 50px;
+    padding: 1px;
     border-radius: 20px;
-    padding: 15px;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    background-color: #87bcbf;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
+    transition: background-color 0.2s;
+  }
+  &__slider {
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 15%);
+    transition: transform 0.2s ease;
+    transform: translateX(100%);
+  }
+  &__heading {
+    text-transform: uppercase;
+  }
+}
+.settings {
+  &__main {
+    background-color: #f0f3f4;
+  }
+
+  &__line {
+    display: block;
+    color: #fff;
+  }
+
+  &__heading {
+    text-align: center;
+    margin: 1% 0% 10%;
+    padding-top: 4%;
+
+    &__Manage {
+      color: #87bcbf;
+      font-size: 2em;
+      font-weight: 900;
+      display: block;
+    }
+
+    &__Categories {
+      color: #6e8ca0;
+      font-size: 1.2em;
+      font-weight: 400;
+      display: block;
+    }
+  }
 }

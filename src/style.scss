@@ -1,7 +1,9 @@
 @use "./scss/reset";
-@use "./scss/scrollBtn";
-@use "./scss/slider";
-@use "./scss/progress";
-@use "./scss/darkmode";
+@use "./scss/wrapper";
+@use "./scss/header";
+@use "./scss/news";
+@use "./scss/search";
+@use "./scss/settings";
 @use "./scss/switch";
 @use "./scss/touch";
+@use "./scss/darkmode";
