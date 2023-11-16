@@ -55,45 +55,45 @@ var __webpack_exports__ = {};
 })());
 
 ;// CONCATENATED MODULE: ./src/scripts/touch.js
-/* harmony default export */ var touch = ((function() {
-	if (!window.location.pathname.includes("touch.html")) return // guard clause
+/* harmony default export */ var touch = ((function () {
+  if (!window.location.pathname.includes("index.html")) return; // guard clause
 
-	const DIV = document.querySelector(".touchDiv")
+  const LI = document.querySelector(".news__category__items");
 
-	DIV.addEventListener("touchstart", touchHandler)
-	DIV.addEventListener("touchend", touchHandler)
+  LI.addEventListener("touchstart", touchHandler);
+  LI.addEventListener("touchend", touchHandler);
 
-	let x
+  let x;
 
-	function touchHandler(event) {
-		if (event.type === "touchstart") {
-			x = event.changedTouches[0].clientX
-		} else { // touchend
-			let direction
-			if (x + 50 < event.changedTouches[0].clientX) {
-				direction = "Right"
-			} else if (x - 50 > event.changedTouches[0].clientX) {
-				direction = "Left"
-			}
+  function touchHandler(event) {
+    if (event.type === "touchstart") {
+      x = event.changedTouches[0].clientX;
+    } else {
+      // touchend
+      let direction;
+      if (x + 50 < event.changedTouches[0].clientX) {
+        direction = "Right";
+      } else if (x - 50 > event.changedTouches[0].clientX) {
+        direction = "Left";
+      }
 
-			if (direction) {
-				DIV.lastElementChild.addEventListener("animationstart", function() {
-					DIV.removeEventListener("touchstart", touchHandler)
-					DIV.removeEventListener("touchend", touchHandler)
-				})
-				DIV.lastElementChild.addEventListener("animationend", function() {
-					//DIV.lastElementChild.style.animation = ""
-					DIV.removeChild(DIV.lastElementChild)
-					DIV.addEventListener("touchstart", touchHandler)
-					DIV.addEventListener("touchend", touchHandler)
-				})
+      if (direction) {
+        LI.addEventListener("animationstart", function () {
+          LI.removeEventListener("touchstart", touchHandler);
+          LI.removeEventListener("touchend", touchHandler);
+        });
+        LI.addEventListener("animationend", function () {
+          //LI.lastElementChild.style.animation = ""
+          LI.addEventListener("touchstart", touchHandler);
+          LI.addEventListener("touchend", touchHandler);
+        });
 
-				DIV.lastElementChild.style.animation = `move${direction} 2s ease`;
-				direction = null
-			}
-			x = null
-		}
-	}
+        LI.lastElementChild.style.animation = `move${direction} 2s ease`;
+        direction = null;
+      }
+      x = null;
+    }
+  }
 })());
 
 ;// CONCATENATED MODULE: ./src/images/archive-icon.png
