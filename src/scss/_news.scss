@@ -49,11 +49,11 @@
   &__category__links__archive-btn {
     background-color: #87bcbf;
     display: flex;
-    position: relative;
+    position: absolute;
     width: 80px;
     height: 80px;
     left: 100%;
-    opacity: 0.33;
+    bottom: 0%;
     justify-content: center;
     align-items: center;
   }

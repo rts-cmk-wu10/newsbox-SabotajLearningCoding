@@ -79,20 +79,7 @@ var __webpack_exports__ = {};
         direction = "Left";
       }
 
-      if (direction) {
-        LI.addEventListener("animationstart", function () {
-          LI.removeEventListener("touchstart", touchHandler);
-          LI.removeEventListener("touchend", touchHandler);
-        });
-        LI.addEventListener("animationend", function () {
-          //LI.lastElementChild.style.animation = ""
-          LI.addEventListener("touchstart", touchHandler);
-          LI.addEventListener("touchend", touchHandler);
-        });
-
-        LI.lastElementChild.style.animation = `move${direction} 2s ease`;
-        direction = null;
-      }
+      console.log(touchHandler);
       x = null;
     }
   }
